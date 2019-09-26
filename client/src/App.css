@@ -1,0 +1,37 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+.app {
+    height: 100%;
+}
+
+#root {
+    height: 100vh;
+}
+
+.channel-section, .user-section {
+    min-height: 44vh;
+}
+
+.channel-list, .user-list {
+    min-height: 30vh;
+    max-height: 30vh;
+    overflow:scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.message-section {
+    min-height: 89.5vh;
+}
+
+.message-list {
+    min-height: 75vh;
+    max-height: 75vh;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+}
