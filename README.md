@@ -1,8 +1,8 @@
 # Chat With Me
 
 ## About
-This is an example of how to make React, Golang and RethinkDB work togather.  
-So we build this realtime app call **chatwithme**.  
+This is an example of how to make React, Golang and RethinkDB work together.  
+So we built this realtime app call **chatwithme**.  
 
 ## Run this project for developing  
 ### Install dependencies  
