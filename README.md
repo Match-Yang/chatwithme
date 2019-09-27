@@ -36,9 +36,9 @@ Above command should now install all the package automatically.
 > > `r.db("chatwithme").table("message").indexCreate("createAt")`  
 
 ### Now run
-1.Serve http  
+1.Build frontend  
 > `$cd chatwithme/client`  
-> `$npm run watch`  
+> `$npm run build`  
 
 2.Run the golang backend  
 > `cd chatwithme/server`  

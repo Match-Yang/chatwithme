@@ -1,4 +1,6 @@
 const path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: './src/index.js',
@@ -10,7 +12,11 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
-        options: {presets: ['@babel/env']}
+        options: {
+          'presets': ['@babel/env', '@babel/preset-react'],
+          'plugins':
+              [['@babel/plugin-proposal-class-properties', {'loose': true}]]
+        }
       },
       {test: /\.css$/, use: ['style-loader', 'css-loader']}
     ]
@@ -22,4 +28,13 @@ module.exports = {
     hotOnly: true
   },
   resolve: {extensions: ['*', '.js', '.jsx']},
+  plugins: [
+    // new CopyPlugin([
+    //   {from: 'public/index.html'},
+    // ]),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'public/index.html',
+    })
+  ],
 };
